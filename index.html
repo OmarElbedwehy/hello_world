@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELLO WORLD</title>
+    <style>
+        body{
+            width: 99vw;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            background-color: #eee;
+            padding: 20px;
+            width: 70%;
+            font-family: sans-serif;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: 0.3s;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        h1::after,
+        h1::before{
+            content: '';
+            background-color: #bbb;
+            width: 0%;
+            height: 100%;
+            transition: 0.5s;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+        h1::after{
+            right: 0;
+        }
+        h1::before{
+            left: 0;
+        }
+        h1:hover::after,
+        h1:hover::before{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>HELLO WORLD</h1>
+</body>
+</html>
